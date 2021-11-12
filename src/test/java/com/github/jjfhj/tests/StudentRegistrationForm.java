@@ -1,10 +1,13 @@
 package com.github.jjfhj.tests;
 
+import com.github.jjfhj.pages.RegistrationsPage;
 import org.junit.jupiter.api.Test;
 
 import static com.github.jjfhj.tests.TestData.*;
 
 public class StudentRegistrationForm extends TestBase {
+
+    RegistrationsPage registrationsPage = new RegistrationsPage();
 
     @Test
     void fillFormTest() {
@@ -23,8 +26,9 @@ public class StudentRegistrationForm extends TestBase {
                 .typeCurrentAddress(address)
                 .selectState(state)
                 .selectCity(city)
-                .clickSubmit()
-                //Проверить всплывающее модальное окно "Thanks for submitting the form" после успешной отправки формы
+                .clickSubmit();
+        //Проверить всплывающее модальное окно "Thanks for submitting the form" после успешной отправки формы
+        registrationsPage
                 .checkModalFormTitle()
                 .checkModalFormValue("Student Name", firstName + " " + lastName)
                 .checkModalFormValue("Student Email", email)
