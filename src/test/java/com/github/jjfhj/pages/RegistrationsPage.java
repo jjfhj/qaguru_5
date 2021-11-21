@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class RegistrationsPage {
+
     // Locators & Elements
     private final String FORM_TITLE = "Student Registration Form";
     private final String MODAL_TITLE = "Thanks for submitting the form";

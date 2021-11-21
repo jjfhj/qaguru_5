@@ -3,6 +3,7 @@ package com.github.jjfhj.tests;
 import com.github.javafaker.Faker;
 
 public class TestData {
+
     public static String
             gender = "Male",
             day = "16",
